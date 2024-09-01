@@ -1,0 +1,21 @@
+# Welcome message and input prompts
+loan_amount = float(input("Welcome to Loan Calculator 3000! Please input the dollar amount of your loan and hit enter:    "))
+
+annual_interest_rate = float(input("OK, so that's $" + str(loan_amount) + ", now please enter the interest rate for your loan. For example, if the interest rate is 8 percent, enter 8:  "))
+
+loan_years = int(input(" Got it, " + str (annual_interest_rate) + " percent interest. And how many years is the loan term?:     "))
+
+
+payment_count = loan_years * 12  # Total number of payments
+interest_rate = annual_interest_rate / 1200  # Convert annual interest rate percentage to monthly decimal rate
+
+# Calculate the monthly payment
+monthly_payment = loan_amount * (interest_rate * (1 + interest_rate) ** payment_count) / ((1 + interest_rate) ** payment_count - 1)
+
+twice_monthly= monthly_payment/2
+bi_weekly= (monthly_payment *12)/26
+
+# Print the result and offer further information
+print("Great, here is the breakdown: If you're paying monthly, it's going to be a payment of $" + str(round(monthly_payment, 4)) + " a month for " + str(loan_years) + " years. If you're paying twice monthly, that's going to be a payment of $" + str(round(twice_monthly, 4)) + " twice a month for " + str(loan_years) + " years. And if you choose to pay bi-weekly, then that's going to be a payment of $" + str(round(bi_weekly, 2)) + " every two weeks for " + str(loan_years) + " years.")
+
+
