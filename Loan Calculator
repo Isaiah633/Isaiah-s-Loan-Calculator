@@ -1,5 +1,5 @@
 # Welcome message and input prompts
-loan_amount = float(input("Welcome to Loan Calculator 3000! Please input the dollar amount of your loan and hit enter:    "))
+loan_amount = float(input("Welcome to Loan Calculator 3000! This program will quickly calculate the cost of your loan for you. Please input the dollar amount of your loan and hit enter:    "))
 
 annual_interest_rate = float(input("OK, so that's $" + str(loan_amount) + ", now please enter the interest rate for your loan. For example, if the interest rate is 8 percent, enter 8:  "))
 
